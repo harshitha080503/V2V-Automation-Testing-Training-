@@ -1,0 +1,154 @@
+Basic xml code:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentdetails[
+<!ELEMENT studentdetails (name,course,year,contact)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+
+]>
+<studentdetails>
+  <name>dolly</name>
+  <course>B.E</course>
+  <year>2025</year>
+  <contact>1234567890</contact>
+</studentdetails>
+______________________________________________________________________________________
+DTD:1.Internal DTD(In eclipse)
+    2.External DTD(In eclipse)
+(Note:If any errors click right click and validate it.)
+
+Internal DTD:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE allstudents[
+<!ELEMENT allstudents (student)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+]>
+
+<allstudents>
+<student>
+<name>Ajay</name>
+<email>ajay@gmail.com</email>
+<contact>1234567890</contact>
+<address>Flat no 2</address>
+</student>
+</allstudents>
+
+---------------------------------------
+
+External DTD:
+
+<!--create test.xml in eclipse(any name but test.xml program is in eclipse-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE allstudents SYSTEM "test.dtd">
+<allstudents>
+<student>
+<name>Ajay</name>
+<email>ajay@gmail.com</email>
+<contact>1234567890</contact>
+<address>Flat no 2</address>
+</student>
+</allstudents>
+
+<!--create test.dtd in eclipse(any name but text.dtd program is in eclipse)
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT allstudents (student*)>
+<!ELEMENT student (name,email,contact,address?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+_____________________________________________________________________________________
+Cardinality operators:
+(refer notes)
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentdetails[
+<!ELEMENT studentdetails (name*,course,year+,contact?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+
+]>
+<studentdetails>
+  <name>dolly</name>
+  <name>harshitha</name>
+  <course>B.E</course>
+  <year>2025</year>
+  <contact>1234567890</contact>
+</studentdetails>
+______________________________________________________________________________________
+Entities:
+link:(https://www.tutorialspoint.com/online_xml_editor.htm)
+eclipse:Entities.xml
+<?xml version="1.0"?>
+			<Company>
+			  <Employee>
+				  <FirstName>&gt;</FirstName>
+				  <LastName>&lt;</LastName>
+				  <ContactNo>&apos;</ContactNo>
+				  <Email>&quot;</Email>
+				  <Address>
+					   <City>Bangalore</City>
+					   <State>Karnataka</State>
+					   <Zip>560212</Zip>
+				  </Address>
+			  </Employee>
+			</Company>
+________________________________________________________________________________________
+Types of Entities:(Entities.xml)
+1.Text only
+2.child only
+3.empty
+4.mixed
+5.ANY
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentDetails [
+  <!ELEMENT studentDetails (student, address, subjects, empty, mixed, any)>
+  <!ELEMENT student (#PCDATA)>
+  <!ELEMENT address (city, state)>
+  <!ELEMENT city (#PCDATA)>
+  <!ELEMENT state (#PCDATA)>
+  <!ELEMENT subjects (subject+)>
+  <!ELEMENT subject (#PCDATA)>
+  <!ELEMENT empty EMPTY>
+  <!ATTLIST empty status CDATA #IMPLIED>
+  <!ELEMENT mixed (#PCDATA | b | i)*>
+  <!ELEMENT b (#PCDATA)>
+  <!ELEMENT i (#PCDATA)>
+  <!ELEMENT any ANY>
+]>
+<studentDetails>
+  <student>John Doe</student>
+  <address>
+    <city>Pune</city>
+    <state>Maharashtra</state>
+  </address>
+  <subjects>
+    <subject>Math</subject>
+    <subject>Science</subject>
+  </subjects>
+  <empty status="active"/>
+  <mixed>
+    Student is <b>excellent</b> in <i>sports</i>.
+  </mixed>
+  <any>
+    <student>Jane Smith</student>
+    <address>
+      <city>Mumbai</city>
+      <state>Maharashtra</state>
+    </address>
+    Additional info allowed here.
+  </any>
+</studentDetails>
+___________________________________________________________________________________________________
+Attributes
+
+
