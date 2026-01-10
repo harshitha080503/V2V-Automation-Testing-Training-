@@ -1,0 +1,116 @@
+Create database CGIF;
+CREATE database Wipro;
+use CGIF;
+CREATE table TB1(cgid int, name varchar(255),address varchar(255),city varchar(255));
+CREATE table Department(id int,Branch varchar(255) Location varchar(255));
+CREATE table student(sid int,Firstname varchar(255),Lastname varchar(255),address varchar(255),city varchar(255));
+use Wipro show tables;
+use CGIF;
+show tables;
+INSERT INTO student(sid,Firstname,Lastname,address,city) values(1,'ajay','kumar','talawade','pune');
+select* from student;
+UPDATE student SET city='mumbai' where sid;
+select* from student;
+update student SET city
+
+___________________________________________________
+JOINS:
+executed in sqlone compiler and pgadmin4(go to tools and query tools)
+create table empinfor(empl_id INT PRIMARY KEY,empl_name VARCHAR(100),pid_id INT);         
+create table perinfor(pid_id INT PRIMARY KEY,pid_name VARCHAR(100) NOT NULL);           
+
+insert into empinfor(empl_id,empl_name,pid_id) values(1,'ajay',10);                       
+insert into empinfor(empl_id,empl_name,pid_id) values(2,'amit',20);
+insert into empinfor(empl_id,empl_name,pid_id) values(3,'akash',30);
+insert into empinfor(empl_id,empl_name,pid_id) values(4,'aman',null);
+
+insert into perinfor(pid_id,pid_name) values(10,'HR');                                    
+insert into perinfor(pid_id,pid_name) values(20,'Admin');
+insert into perinfor(pid_id,pid_name) values(30,'dev');
+insert into perinfor(pid_id,pid_name) values(40,'HR');
+
+select * from  empinfor;
+select * from perinfor;
+
+SELECT e.empl_name,p.pid_name FROM empinfor e INNER JOIN perinfor p ON e.pid_id=p.pid_id;  
+SELECT e.empl_name,p.pid_name FROM empinfor e LEFT JOIN perinfor p ON e.pid_id=p.pid_id;   
+SELECT e.empl_name,p.pid_name FROM empinfor e RIGHT JOIN perinfor p ON e.pid_id=p.pid_id; 
+
+Output:
+
+empinfor table created and inserted
++---------+-----------+--------+
+| empl_id | empl_name | pid_id |
++---------+-----------+--------+
+|       1 | ajay      |     10 |
+|       2 | amit      |     20 |
+|       3 | akash     |     30 |
+|       4 | aman      |   NULL |
++---------+-----------+--------+
+
+perinfor table created and inserted
++--------+----------+
+| pid_id | pid_name |
++--------+----------+
+|     10 | HR       |
+|     20 | Admin    |
+|     30 | dev      |
+|     40 | HR       |
++--------+----------+
+
+innerjoin
++-----------+----------+
+| empl_name | pid_name |
++-----------+----------+
+| ajay      | HR       |
+| amit      | Admin    |
+| akash     | dev      |
++-----------+----------+
+
+leftjoin
++-----------+----------+
+| empl_name | pid_name |
++-----------+----------+
+| ajay      | HR       |
+| amit      | Admin    |
+| akash     | dev      |
+| aman      | NULL     |
++-----------+----------+
+
+right join
++-----------+----------+
+| empl_name | pid_name |
++-----------+----------+
+| ajay      | HR       |
+| amit      | Admin    |
+| akash     | dev      |
+| NULL      | HR       |
++-----------+----------+
+____________________________________________________
+keys:
+create database PDB;
+use PDB;
+create table empinfotest(emp_id INT PRIMARY KEY,emp_name VARCHAR(100),emp_address VARCHAR(100),pid_id INT);
+
+insert into empinfotest(emp_id,emp_name,emp_address,pid_id) values(1,'ajay','pune',10);
+insert into empinfotest(emp_id,emp_name,emp_address,pid_id) values(2,'amit','mumbai',20);
+______________________________________________________
+datatypes:(INT,VARCHAR(100),DATE,BOOLEAN,TIME)
+executed in one compiler and pgadmin4
+create table student(id INT PRIMARY KEY,name VARCHAR(100),email VARCHAR(100),admissiondate DATE,cgpa DECIMAL(8,1),IsActive BOOLEAN,starttime TIME);
+insert into student(id,name,email,admissiondate,cgpa,IsActive,starttime) values(1,'raju','r@gmail','2000-01-01',7.8,TRUE,'08:08:14');
+insert into student(id,name,email,admissiondate,cgpa,IsActive,starttime) values(2,'ramu','ramu@gmail','2000-01-02',7.9,0,'08:08:14');
+insert into student(id,name,email,admissiondate,cgpa,IsActive,starttime) values(3,'lilly','l@gmail','2000-03-01',7.8,1,'08:08:14');
+insert into student(id,name,email,admissiondate,cgpa,IsActive,starttime) values(4,'jessy','jessy@gmail','2000-05-02',7.9,FALSE,'08:08:14');
+insert into student(id,name,email,admissiondate,cgpa,IsActive,starttime) values(5,'dolly','dolly@gmail','2000-08-01',7.8,TRUE,'08:08:14');
+insert into student(id,name,email,admissiondate,cgpa,IsActive,starttime) values(6,'honey','honey@gmail','2000-05-02',7.9,TRUE,'08:08:14');
+
+select * from student;
+DROP TABLE student; //If it shows student exists already use this query
+
+
+
+
+ 
+
+
