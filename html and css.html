@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML AND CSS</title></head>
+        <body>
+            <h1>We are Learning Html and Css</h1>
+            <p>We are working on css</p>
+        </body>
+        <style>
+            body{
+                background-color:cornsilk;
+                font-family: Arial;
+            }
+            h1{
+                color:black;
+                text-align:center;
+            }
+            p{
+                color:rgb(23, 173, 103);
+                text-align:center;
+            }
+        </style>
+    <body>
+        <ul><li><a href="">Home</a></li>
+            <li><a href="">about</a><li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </body>
+        <style>
+            ul{
+                list-style-type: none;
+                margin:0;
+                padding:0;
+                background-color: rgba(176, 85, 62, 0.705);
+                overflow:hidden;
+            }
+            li a{
+                display:block;
+                color:rgb(170, 24, 24);
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+            li a:hover{
+                background-color: antiquewhite;
+            }
+        </style>
+    <body><!--CREATING A PROFILE---------------------------------------------------->
+        <div class="card">
+            <img src="c:\Users\kalharsh\Downloads\photo.jpg"alt="profile">
+            <h2>john</h2>
+            <p>software developer</p>
+        </div>
+    </body>
+    <style>/*STYLING PROFILE*/
+        .card{
+            background-color: azure;
+            width: 300px;
+            margin:50px auto;
+            padding: 30px;
+            box-shadow: grey 0 4px 8px;
+            text-align: center;
+            border-radius: 5%;
+        }
+        p{
+            color:red;
+        }
+        img{
+            width: 100px;
+            border-radius: 5%;
+        }
+        h2{
+            color: rgb(27, 27, 26);
+        }
+    </style>   
+    <body><!--CREATING A FORM----------------------------------------------------------------------->
+        <div class="form-container">
+            <h2>Contact us</h2>
+            <form>
+                <input type="text" placeholder="Ajay" required>
+                <input type="email" placeholder="Ajay@gmail.com" required>
+                <input type="software engineer" placeholder="software engineer"></textarea>
+                <button type="send">send</button>
+            </form>
+        </div>
+    </body>
+    <style>/*STYLING FOR FORM CARD*/
+        h2{
+            text-align: center;
+        }
+        .form-container{
+            width: 300px;
+            margin:50px auto;
+            background:rgb(100, 100, 100);
+            padding:40px;
+            border-radius:10px;
+            box-shadow: 0 4px 6px gray;
+        }
+        input,textarea{
+            text-align: center;
+            width:100%;
+            padding:10px;
+            margin:8px auto;
+            border:1px solid white;
+            border-radius: 5px;
+        }
+        button{
+            display: block; 
+            margin: 0 auto;
+            background-color: rgb(54, 163, 188);
+            color:rgb(240, 18, 2);
+            padding: 10px 15px;
+            border:none;
+            border-radius: 5px;
+           
+        }
+        button:hover{
+            background-color: rgb(223, 220, 227);
+        }
+    </style>
+</html>

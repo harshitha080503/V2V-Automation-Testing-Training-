@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration form</title>
+    </style>
+    </head>
+    <body>
+        <div class="Form"><!--CREATING REGISTRATION FORM------>
+            <h2>Registration Form</h2>
+            <form action="">
+                <p><label for="first name">First Name:</label><br><br>
+                <input type="enter name" id="first" name="first" required><br><br>
+                <label for="last name">Last Name:</label><br><br>
+                <input type="enter name" id="Last" name="Last" required><br><br>
+                <label for="email">Email:</label><br><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="contact">Mobile Contact:</label><br><br>
+                <input type="contact" id="contact" name="contact" maxlength="10" required><br><br>
+                <label for="password">Enter Password:</label><br><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <label for="repassword">Enter Re-type Password:</label><br><br>
+                <input type="password" id="repassword" name="repassword" required><br><br>
+                <label for="gender">Please select Gender:</label><br><br>
+                <select id="gender" name="gender" required>
+                    <option id="select">select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+
+                </select><br><br>
+                <button type="submit">Submit</button></p>
+            </form>
+            
+        </div>
+        <footer>If already registered?<b><a href="https://www.tutorialspoint.com/market/public/index.php/login.jsp">Signin Here</a></b></footer>      
+    </body>
+</html>
+<style>/*Registration Form Styling*/
+        body{
+            background-image:url(https://img.freepik.com/free-vector/background-gradient-green-color-abstract-modern-designs_343694-2138.jpg?semt=ais_hybrid);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 0;
+            
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        
+        footer{
+            text-align: center;
+            color:black;
+        }
+        
+        form {
+            background-color: rgb(239, 232, 232);
+            padding: 20px;           
+            border-radius: 10px;     
+            width: 300px;            
+            margin: auto;            
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        button{
+            background-color: rgb(232, 232, 241);
+            color:green;
+            border-radius: 5px;
+            padding: 5px;
+            width:100px;
+            margin:0%;
+        }
+        button:hover{
+            color:goldenrod;
+        }
+</style>
