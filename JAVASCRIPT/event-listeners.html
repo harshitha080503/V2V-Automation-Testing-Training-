@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My Website
+        </title>
+        <link rel="stylesheet" href="event-listeners.css">
+    </head>
+    <body>
+        <form id="myForm">
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button type="sumbit">Submit</button>
+        </form>
+        <div class="user-details">
+            <h3>user Details</h3>
+            <h2 id = "name" style=" color:blue;">
+            </h2>
+        </div>
+        <div>
+            <select id="mycolors">
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+        <div id="box"></div><!--colouring box and adding to div tag-->
+        <div>
+            <label for="country"><br>Select a Country</label>
+            <select id="country" onchange="handleChange()">
+                <option value="Canada">CANADA</option>
+                <option value="UK">UK</option>
+                <option value="India">INDIA</option>
+            </select>
+            <p id="txt"></p>
+        </div>
+        <script src="event-listeners.js"></script>
+ 
+    </body>
+</html>

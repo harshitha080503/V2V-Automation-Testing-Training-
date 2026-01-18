@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="practice.css">
+    </head>
+    <body>
+        <!--<form id="myform"
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button type="submit">Submit</button>-->
+
+        <form onsubmit="return validationForm()">                         <!--creating form-->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h1>ADD() METHOD</h1>
+        <button onclick="myfunction()">Add</button>
+        <p>click "ADD" to add "mystyle" class to mydiv</p>
+        <div id="myDiv">
+            <p>I am myDiv</p>
+        </div>
+        <script src="practice.js"></script>
+        <h1 id="title">WELCOME TO IT</h1>
+    </body>
+</html>

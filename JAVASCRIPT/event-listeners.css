@@ -1,0 +1,7 @@
+#box{                          /*for box item we did styling part*/
+    width : 200px;
+    height:200px;
+    border:1px solid gray;
+    margin-left: 5;
+
+}
